@@ -12,14 +12,13 @@
 # A binary named xxxx will be produced
 
 CC = gcc
-C++ = g++ 
 LIBDIRS = -L/usr/lib64
 INCDIRS = -I/usr/include
 LDLIBS =  -lglut -lGL -lGLU -lX11 -lm
 
-.c:
-	$(CC)  $@.c $(INCDIRS) $(LIBDIRS) $(LDLIBS) -o $@
+brot: brot.o
+	$(CC)  -o brot brot.o $(INCDIRS) $(LIBDIRS) $(LDLIBS)
 
+brot.o : brot.c
+	$(CC)  -c brot.c $(INCDIRS)
 
-.cc:
-	$(C++)  -O $@.cc -g $(INCDIRS) $(LIBDIRS) $(LDLIBS) -o $@

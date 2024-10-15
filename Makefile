@@ -22,3 +22,6 @@ brot: brot.o
 brot.o : brot.c
 	$(CC)  -c brot.c $(INCDIRS)
 
+clean:	
+	rm *.o
+

@@ -244,14 +244,14 @@ void mouse(int button, int state, int x, int y)
         case GLUT_LEFT_BUTTON:
             if (state == GLUT_DOWN)
             {
-                DELTA_SPIN = DELTA_SPIN - 1.0;
+                DELTA_SPIN = DELTA_SPIN - 0.1;
                 glutIdleFunc(SpinDisplay);
             }
             break;
         case GLUT_RIGHT_BUTTON:
             if (state == GLUT_DOWN)
             {
-                DELTA_SPIN = DELTA_SPIN + 1.0;
+                DELTA_SPIN = DELTA_SPIN + 0.1;
                 glutIdleFunc(SpinDisplay);
             }
             break;
